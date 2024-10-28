@@ -3,25 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LDB-Chess-EPFL</title>
+    <title>La Dame Blanche Chess EPFL</title>
     <style>
         body {
-            background-color: red;
-            color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-            font-size: 2em;
+            font-family: Arial, sans-serif; /* Police par défaut */
         }
+        .header {
+            background-image: url('Chess_pieces_2.jpg');
+	    background-size: auto;
+	    background-position: center top;
+	    background-repeat: repeat-x;
+	    height:330px;
+        }
+        .content {
+            background-image: url('Echiquier.png');
+	    background-size: auto;
+	    background-repeat: repeat;
+	    height: auto;
+	    display: flex; /* Utilise flexbox pour centrer le contenu */
+            align-items: center; /* Centre verticalement */
+            justify-content: center; /* Centre horizontalement */
+        }
+        .rectangle {
+            background-color: white; /* Fond du rectangle */
+            padding: 20px; /* Espacement à l'intérieur du rectangle */
+            border-radius: 10px; /* Bords arrondis */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
+            max-width: 600px; /* Largeur maximale du rectangle */
+            text-align: center; /* Centre le texte à l'intérieur du rectangle */
+	    width: 100%; /* S'assure que le rectangle peut s'ajuster */
+            margin: 20px; /* Ajoute un peu d'espace de chaque côté */
+        }
+
+	.social-links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.social-icon {
+		display: inline-block;
+		margin: 10px;
+		transition: transform 0.3s ease;
+	}
+			
+	.social-icon:hover {
+		transform: scale(1.2);
+	}
     </style>
+
+
 </head>
 <body>
-    <h1>LA DAME BLANCHE</h1>
+    <div class="header">    
+    </div>
 
-    <p>Bienvenue sur le site officiel de La Dame Blanche.</p>
-    <p>La Dame Blanche est une association d'échecs de l'EPFL (École Polytechnique Fédérale de Lausanne) qui rassemble tous les passionnés d'échecs sur le campus</p>
+    <div class="content">
+        <div class="rectangle">
+            <img src="728x407.jpg" alt="Image de l'accueil" align="center" width="400" height="400" >
+			<h3 align="center"><u>La dame Blanche</u></h3>
+			<img src="cavalier.webp" alt="Image de cavalier" align="center" width="50" height="50" >
+			<p align="center"> 
+				Salut à toi, amie des échecs! Toi aussi tu trembles face aux parties du grand 
+				<br>Magnus Carlsen? Tu aimerais partager ton expérience avec des personnes aussi passionnées 
+				<br>que toi? Ne cherche plus. Le club d'échecs "La Dame Blanche" vous invite tous les mardi du semestre 
+				<br>en CM 1104 de 19 à 21h. De débutant à confirmé vous êtes tous bienvenus pour jouer, 
+				<br> apprendre et faire connaissance.
+				<br> Contact pour plus d'informations: <u>ladameblanche@epfl.ch</u>.
+				<br>
+				<br>
+				<br>
+				<br>
+			</p>
+		<div class="social-links">
+				
+				<a href="https://www.instagram.com/" class="social-icon" target="_blank"><img src="instagram_icon.avif" alt="instagram" width="75" height="75"></a>
+				<a href="https://telegram.org/" class="social-icon" target="_blank"><img src="telegram.png" alt="telegram" width="75" height="75"></a>
+		</div>
+        </div>
+    </div>
 </body>
 </html>
-
