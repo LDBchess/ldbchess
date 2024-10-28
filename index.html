@@ -20,7 +20,7 @@
             background-image: url('Echiquier.png');
 	    background-size: auto;
 	    background-repeat: repeat;
-	    min-height: calc(100vh - 150px);
+ 	    min-height: calc(100vh - 150px);
 	    display: flex; /* Utilise flexbox pour centrer le contenu */
             align-items: center; /* Centre verticalement */
             justify-content: center; /* Centre horizontalement */
@@ -51,6 +51,31 @@
 	.social-icon:hover {
 		transform: scale(1.2);
 	}
+
+	 /* Media query pour les petits écrans */
+        @media (max-width: 768px) {
+            .header {
+                height: 120px; /* Réduit la hauteur de l'en-tête */
+                font-size: 1.5em; /* Ajuste la taille de la police */
+            }
+            .rectangle {
+                padding: 15px; /* Réduit le padding à l'intérieur du rectangle */
+                margin: 0 10px; /* Réduit l'espace autour du rectangle */
+            }
+        }
+
+        /* Media query pour les très petits écrans */
+        @media (max-width: 480px) {
+            .header {
+                height: 100px; /* Réduit encore la hauteur de l'en-tête */
+                font-size: 1.2em; /* Réduit la taille de la police */
+            }
+            .rectangle {
+                padding: 10px; /* Réduit encore le padding */
+                margin: 0 5px; /* Réduit l'espace autour du rectangle */
+            }
+        }
+
     </style>
 
 
@@ -65,11 +90,11 @@
 			<h3 align="center"><u>La dame Blanche</u></h3>
 			<img src="cavalier.webp" alt="Image de cavalier" align="center" width="50" height="50" >
 			<p align="center"> 
-				Salut à toi, ami(e) des échecs! Toi aussi tu trembles face aux parties du grand
-				<br>Magnus Carlsen? Tu aimerais partager ton expérience avec des personnes aussi  
-				<br>passionnées que toi? Ne cherche plus. Le club d'échecs "La Dame Blanche"  
-				<br>vous invite tous les mardi et jeudi  du semestre en CM 1104 de 19 à 21h. 
-				<br>De débutant à confirmé vous êtes tous bienvenus pour jouer,apprendre et faire connaissance!!!
+				Salut à toi, amie des échecs! Toi aussi tu trembles face aux parties du grand 
+				<br>Magnus Carlsen? Tu aimerais partager ton expérience avec des personnes aussi passionnées 
+				<br>que toi? Ne cherche plus. Le club d'échecs "La Dame Blanche" vous invite tous les mardi du semestre 
+				<br>en CM 1104 de 19 à 21h. De débutant à confirmé vous êtes tous bienvenus pour jouer, 
+				<br> apprendre et faire connaissance.
 				<br> Contact pour plus d'informations: <u>ladameblanche@epfl.ch</u>.
 				<br>
 				<br>
@@ -78,8 +103,8 @@
 			</p>
 		<div class="social-links">
 				
-				<a href="https://www.instagram.com/chess.epfl?igsh=czh4OGhrdmg0eHE1" class="social-icon" target="_blank"><img src="instagram_icon.avif" alt="instagram" width="75" height="75"></a>
-				<a href="https://t.me/chess_epfl" class="social-icon" target="_blank"><img src="telegram.png" alt="telegram" width="75" height="75"></a>
+				<a href="https://www.instagram.com/" class="social-icon" target="_blank"><img src="instagram_icon.avif" alt="instagram" width="75" height="75"></a>
+				<a href="https://telegram.org/" class="social-icon" target="_blank"><img src="telegram.png" alt="telegram" width="75" height="75"></a>
 		</div>
         </div>
     </div>
