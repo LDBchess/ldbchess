@@ -14,13 +14,21 @@
             justify-content: space-between;
             align-items: center;
             background-color: #333;
-            padding: 5px;
+            padding: 10px;
         }
         .logo img {
             height: 50px;
         }
         .nav {
             display: flex;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
         .dropdown {
             position: relative;
@@ -53,14 +61,10 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        .dropdown:last-child .dropdown-content {
-            right: 0;
-            left: auto;
-        }
         .hero {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 300px;
             background: url("seance_ldb.jpg") no-repeat center center/cover;
         }
         .hero-text {
@@ -68,48 +72,43 @@
             bottom: 20px;
             left: 20px;
             color: white;
-            font-size: 48px;
+            font-size: 36px;
             font-weight: bold;
         }
         .hero-text span {
             display: block;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: normal;
         }
-        /* Style pour le troisième bloc */
         .third-block {
             display: flex;
-            justify-content: space-between;
-            padding: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
             background-color: white;
-            box-sizing: border-box;
-	    margin-top: 100px;
         }
-
         .card {
-            width: 30%;
+            width: 90%;
+            max-width: 300px;
             background-color: #f0f0f0;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             text-align: center;
+            margin: 10px;
         }
-
         .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-
         .card-content {
             padding: 20px;
         }
-
         .card p {
             font-size: 14px;
             color: #555;
         }
-
         .more-info {
             display: inline-block;
             margin-top: 10px;
@@ -119,9 +118,44 @@
             text-decoration: none;
             border-radius: 5px;
         }
-
         .more-info:hover {
             background-color: #555;
+        }
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                padding: 10px;
+            }
+            .nav.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .dropdown {
+                width: 100%;
+                text-align: center;
+            }
+            .dropdown-content {
+                position: relative;
+                display: block;
+                background-color: #444;
+            }
+            .dropdown-content a {
+                color: white;
+            }
+            .hero {
+                height: 200px;
+            }
+            .hero-text {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
@@ -130,6 +164,7 @@
         <div class="logo">
             <img src="728x407.jpg" alt="Logo de l'association">
         </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="nav">
             <div class="dropdown">
                 <button class="dropbtn">Qui sommes-nous?</button>
@@ -160,7 +195,6 @@
             <span>La Dame Blanche</span>
         </div>
     </div>
-    <!-- Troisième bloc -->
     <div class="third-block">
         <div class="card">
             <img src="icon_1.webp" alt="Image 1">
@@ -176,14 +210,12 @@
                 <a href="page2.html" class="more-info">Plus d'infos</a>
             </div>
         </div>
-        <div class="card">
-            <img src="membre.jpg" alt="Image 3">
-            <div class="card-content">
-                <p>Rejoindre le comité ou devenir membre.</p>
-                <a href="page3.html" class="more-info">Plus d'infos</a>
-            </div>
-        </div>
     </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
 
